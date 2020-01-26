@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="calculation.js"></script>
+    <title>iPhoneの電卓</title>
+  </head>
+  <body>
+    <div class="displaypanel">
+      <!-- <div id="pannel1">0</div> -->
+      <div id="pannel2"><br></div>
+      <div id="output">0</div>
+    </div>
+      <div class="mainpanel">
+        <table>
+          <tr>
+            <td class="keypad"><input id="btn" class="btn-top AC" type="button" value="AC" onclick="calcInit()"></td>
+            <td class="keypad"><input id="btn" class="btn-top" type="button" value="+/-" onclick="calcNegated()"></td>
+            <td class="keypad"><input id="btn" class="btn-top %" type="button" value="％" onclick="calcPercent()"></td>
+            <td class="keypad"><input id="btn_divi"class="btn-side ÷" type="button" value="÷" onclick="calcRun('/')"></td>
+          </tr>
+          <tr>
+            <td class="keypad"><input id="btn" class="btn" type="button" value="7" onclick="calcInput(7)"></td>
+            <td class="keypad"><input id="btn" class="btn" type="button" value="8" onclick="calcInput(8)"></td>
+            <td class="keypad"><input id="btn" class="btn" type="button" value="9" onclick="calcInput(9)"></td>
+            <td class="keypad"><input id="btn_multi"class="btn-side ×" type="button" value="×" onclick="calcRun('*')"></td>
+          </tr>
+          <tr>
+            <td class="keypad"><input id="btn" class="btn" type="button" value="4" onclick="calcInput(4)"></td>
+            <td class="keypad"><input id="btn" class="btn" type="button" value="5" onclick="calcInput(5)"></td>
+            <td class="keypad"><input id="btn" class="btn" type="button" value="6" onclick="calcInput(6)"></td>
+            <td class="keypad"><input id="btn_sub" class="btn-side -" type="button" value="－" onclick="calcRun('-')"></td>
+          </tr>
+          <tr>
+            <td class="keypad"><input id="btn" class="btn" type="button" value="1" onclick="calcInput(1)"></td>
+            <td class="keypad"><input id="btn" class="btn" type="button" value="2" onclick="calcInput(2)"></td>
+            <td class="keypad"><input id="btn" class="btn" type="button" value="3" onclick="calcInput(3)"></td>
+            <td class="keypad"><input id="btn_add" class="btn-side +" type="button" value="＋" onclick="calcRun('+')"></td>
+          </tr>
+          <tr>
+            <td colspan="2" class="keypad"><input id="btn" class="btn-0" type="button" value="0" onclick="calcInput(0)"></td>
+            <td class="keypad"><input id="btn" class="btn" type="button" value="." onclick="calcInput('.')"></td>
+            <td class="keypad"><input id="btn_equ" class="btn-side =" type="button" value="＝" onclick="calcEqual()"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
